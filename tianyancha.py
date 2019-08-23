@@ -1,8 +1,8 @@
 '''
-@Description: In User Settings Edit
-@Author: your name
+@Description: 天眼查关键词爬取风险信息
+@Author: bessie_lina
 @Date: 2019-08-14 17:39:30
-@LastEditTime: 2019-08-20 18:00:50
+@LastEditTime: 2019-08-23 10:15:19
 @LastEditors: Please set LastEditors
 '''
 import time
