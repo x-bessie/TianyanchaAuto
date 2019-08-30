@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: bessie
  * @Date: 2019-08-23 09:43:17
- * @LastEditTime: 2019-08-23 10:13:17
+ * @LastEditTime: 2019-08-30 16:19:14
  * @LastEditors: Please set LastEditors
  -->
 
@@ -20,7 +20,7 @@ ChromeDriver   这个的版本要看Selenium 和Chrom浏览器的版本。具体
 
 
 #### 使用方法
-
+tianyancha.py
 启动主程序中加入自己的账号密码和要爬取的规则
 username：用户名
 password：密码
@@ -48,3 +48,8 @@ ty=Tiyancha(username='',passord='').tianyancha_scrapy_batch(input_template='inpu
 #### 温馨提示
 里面的xpath有些不是固定的，反扒工程师会不定期修改，有改请告知。
 
+
+#### 19/08/30
+添加了滑块滑动的破解方法，现在完全全自动
+    文件：auto_login.py
+    运行使用run.py
