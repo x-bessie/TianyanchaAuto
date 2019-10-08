@@ -376,7 +376,7 @@ class Tianyancha:
 #     # list_match=['announcementcourt','lawsuit','court','zhixing','dishonest','courtRegister' ,\
 #     #             'abnormal','punish','equity','equityPledgeRatio','equityPledgeDetail','judicialSale',\
 #     #             'publicnoticeItem','environmentalPenalties','pastEquityCount','judicialAid']
-#     # ty=Tianyancha(username='13250168932',password='ilovena10').tianyancha_scrapy(keyword='北京三快科技有限公司',table=list_match,export='xlsx')
+#     # ty=Tianyancha(username='username',password='password').tianyancha_scrapy(keyword='北京三快科技有限公司',table=list_match,export='xlsx')
 #     # 批量写入
-    # tuple_dicts=Tianyancha(username='13250168932',password='ilovena10').tianyancha_scrapy_batch(input_template='input.xlsx',change_page_interval=2,export='xlsx')
+    # tuple_dicts=Tianyancha(username='username',password='password').tianyancha_scrapy_batch(input_template='input.xlsx',change_page_interval=2,export='xlsx')
 
