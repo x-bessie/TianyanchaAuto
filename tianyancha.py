@@ -303,4 +303,4 @@ if __name__ == "__main__":
     #             'publicnoticeItem','environmentalPenalties','pastEquityCount','judicialAid']
     # ty=Tianyancha(username='13250168932',password='ilovena10').tianyancha_scrapy(keyword='广州地铁集团有限公司',table=list_match,export='xlsx')
     #批量写入
-    tuple_dicts=Tianyancha(username='13250168932',password='ilovena10').tianyancha_scrapy_batch(input_template='input.xlsx',change_page_interval=2,export='xlsx')
+    tuple_dicts=Tianyancha(username='******',password='*****').tianyancha_scrapy_batch(input_template='input.xlsx',change_page_interval=2,export='xlsx')
