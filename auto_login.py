@@ -30,7 +30,7 @@ class Tianyancha:
         self.username=username
         self.password=password
         self.headless=headless
-        self.driver=self.autologin(text_login='请输入11位手机号码', text_password='请输入登录密码')
+        self.driver=self.autologin(text_login='请输入手机号', text_password='请输入登录密码')
 
     '''
     @description: 滑块位移的计算
@@ -57,7 +57,7 @@ class Tianyancha:
         while current < distance:
             if current < mid:
             # 加速度为正2
-                a = 3.5
+                a = 3.1
             else:
                 # 加速度为负3
                 a = -3
@@ -96,18 +96,29 @@ class Tianyancha:
             pass
             
         #登陆按钮
-        driver.find_element_by_xpath('//*[@id="web-content"]/div/div[1]/div[1]/div/div/div[2]/div/div[4]/a').click()
+        # driver.find_element_by_xpath('//*[@id="web-content"]/div/div[1]/div[1]/div/div/div[2]/div/div[4]/a').click()
+        #2020/06/04更新
+        driver.find_element_by_xpath('//*[@id="web-content"]/div/div[1]/div[1]/div[1]/div/div[2]/div/div[5]/a').click()
+
         time.sleep(2)
 
         # 这里点击密码登录时用id去xpath定位是不行的，因为这里的id是动态变化的，所以这里换成了class定位
+        # driver.find_element_by_xpath(
+        #     './/div[@class="modal-dialog -login-box animated"]/div/div[2]/div/div/div[3]/div[1]/div[2]').click()
+        
         driver.find_element_by_xpath(
-            './/div[@class="modal-dialog -login-box animated"]/div/div[2]/div/div/div[3]/div[1]/div[2]').click()
+            './/*[@class="sign-in"]/div/div[2]').click()
         time.sleep(2)
         # 天眼查官方会频繁变化登录框的占位符,所以设置两个新参数来定义占位符
         #输入用户名和密码
+        #2020/06/04更新
         driver.find_elements_by_xpath("//input[@placeholder='{}']".format(text_login))[-2].send_keys(self.username)  
+
         driver.find_elements_by_xpath("//input[@placeholder='{}']".format(text_password))[-1].send_keys(self.password)
-        clixp = './/div[@class="modal-dialog -login-box animated"]/div/div[2]/div/div/div[3]/div[2]/div[5]'
+
+        # clixp = './/div[@class="modal-dialog -login-box animated"]/div/div[2]/div/div/div[3]/div[2]/div[5]'
+        clixp = './/*[@class="sign-in"]/div[2]/div[2]'
+
         driver.find_element_by_xpath(clixp).click()
         time.sleep(2)
 
